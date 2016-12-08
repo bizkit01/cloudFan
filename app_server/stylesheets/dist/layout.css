@@ -1,0 +1,78 @@
+/* css initialize (from Tencent) */
+body,
+ol,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+th,
+td,
+dl,
+dd,
+form,
+fieldset,
+legend,
+input,
+textarea,
+select {
+  margin: 0;
+  padding: 0;
+}
+body {
+  width: 100%;
+  background: #fff;
+  -webkit-text-size-adjust: 100%;
+}
+a {
+  color: #2d374b;
+  text-decoration: none;
+}
+a:hover {
+  color: #cd0200;
+  text-decoration: underline;
+}
+em {
+  font-style: normal;
+}
+li {
+  list-style: none;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+p {
+  word-wrap: break-word;
+}
+.cloudfan-logo {
+  position: relative;
+  width: 40px;
+  top: -10px;
+}
+.cloudFan-footer {
+  width: 100%;
+  min-height: 100px;
+  margin: 0px 0px;
+  padding: 20px 0px;
+  background-color: #3498db;
+}
+.cloudFan-footer div img {
+  width: 60px;
+  height: 60px;
+}
+.cloudFan-footer div span {
+  display: block;
+  color: white;
+  margin: 10px 0px;
+}
+.cloudFan-footer div span a {
+  color: white;
+}

@@ -1,0 +1,163 @@
+.index-banner {
+  margin-top: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px 0px;
+  box-shadow: 0px 3px 3px #333333;
+}
+.slider-image {
+  width: 100%;
+  max-height: 600px;
+}
+.index-services {
+  margin: 50px 0px;
+  border-radius: 3px;
+  background-color: white;
+}
+.index-service {
+  overflow: hidden;
+  background-color: #eeeeee;
+  max-height: 250px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 3px 3px 3px #333333;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.index-service:hover,
+.index-service:focus,
+.index-service:active {
+  background: -webkit-linear-gradient(left top, white, #eeeeee);
+  background: -o-linear-gradient(bottom right, white, #eeeeee);
+  background: -moz-linear-gradient(bottom right, white, #eeeeee);
+  background: linear-gradient(to bottom right, white, #eeeeee);
+  box-shadow: 8px 8px 8px #333333;
+  z-index: 1;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.index-service:hover a img,
+.index-service:focus a img,
+.index-service:active a img {
+  width: 90%;
+}
+.index-service:hover a b,
+.index-service:focus a b,
+.index-service:active a b {
+  width: 90%;
+  color: #3498db;
+}
+.index-service:hover p,
+.index-service:focus p,
+.index-service:active p {
+  font-size: 12px;
+}
+.index-service div {
+  display: block;
+  overflow: hidden;
+}
+.index-service div a {
+  width: 80%;
+  font-size: 20px;
+  color: #777777;
+}
+.index-service div a:hover {
+  cursor: pointer;
+  color: #3498db;
+}
+.index-service div a img {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.index-service div a b {
+  display: block;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.index-service div p {
+  height: 160px;
+  overflow-y: auto;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #777777;
+  text-align: left;
+}
+.index-service div p:hover {
+  cursor: default;
+}
+.index-multiDevices {
+  max-height: 360px;
+  margin: 0px 0px;
+  padding: 30px 0px;
+  background: -webkit-linear-gradient(top, white, #eeeeee);
+  background: -o-linear-gradient(bottom, white, #eeeeee);
+  background: -moz-linear-gradient(bottom, white, #eeeeee);
+  background: linear-gradient(to bottom, white, #eeeeee);
+}
+.index-multiDevices b {
+  display: block;
+  color: #777777;
+  font-size: 200%;
+}
+.index-multiDevices div img {
+  width: 100%;
+  margin: 0px auto;
+}
+.index-email {
+  height: 450px;
+  margin: 0px 0px;
+  padding: 150px 0px;
+  background-image: url("../../../public/images/index/index-email.jpg");
+  background-size: cover;
+}
+.index-email:hover .index-email-tip {
+  visibility: visible;
+  animation: indexEmailTipLift 0.5s 1;
+}
+@keyframes indexEmailTipLift {
+  from {
+    bottom: -30px;
+  }
+  to {
+    bottom: 0px;
+  }
+}
+.index-email div .index-email-tip {
+  background-color: #3498db;
+  padding: 10px 10px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px #333333;
+  position: relative;
+  visibility: hidden;
+}
+.index-email div .index-email-tip b {
+  font-size: 20px;
+  color: white;
+}
+.index-email div .index-email-tip:after {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  content: '';
+  width: 0px;
+  height: 0px;
+  margin: 0 auto;
+  border-top: solid 10px #3498db;
+  border-left: solid 10px transparent;
+  border-right: solid 10px transparent;
+}
+.index-email div input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin-top: 15px;
+  font-size: 20px;
+}
