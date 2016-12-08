@@ -4,6 +4,6 @@ module.exports.indexController = function(req, res){
     copyright: 'CloudFan',
     developer: 'pinebrook',
     contact: 'kaizhang.udel@gmail.com',
-    github: 'aaaaaaaaaaa'
+    github: 'https://github.com/bizkit01'
   });
 };
