@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var readline = require('readline');
 var gracefulShutdown;
-var dbURI = 'mongodb://localhost/cloudFan';
+var dbURI = 'mongodb://localhost/cloudfan';
 
 if (process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGOLAB_URI;
