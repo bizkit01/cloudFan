@@ -59,4 +59,4 @@ if (process.platform === 'wind32') {
   });
 }
 
-require('./homepage');
+require('./indexModel_api');
