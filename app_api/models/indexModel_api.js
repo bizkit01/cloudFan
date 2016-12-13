@@ -1,10 +1,9 @@
 var mongoose = require('mongoose');
 
 var indexSchema = new mongoose.Schema({
-  title: {
-    type: String,
-    required: true
-  }
+  title: String,
+  navtabs: [String],
+  services: [String]
 });
 
-mongoose.model('indexModel_api',indexSchema);
+mongoose.model('indexModel_api',indexSchema,'index');
