@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/public/libs/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/public/libs/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/app_server/stylesheets/dist/layout.css">
-    <link rel="stylesheet" href="/app_server/stylesheets/dist/index.css">
-
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/layout.css">
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/stylesheets/dashbord.css">
   </head>
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -20,7 +20,7 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="/">
-            <img class="cloudfan-logo" src="public/images/global/global-cloudfan-logo-hollow.png"/>
+            <img class="cloudfan-logo" src="/images/global/global-cloudfan-logo-hollow.png"/>
           </a>
           <a class="navbar-brand" href="/">
             cloudFan
@@ -28,8 +28,13 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-main">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
+            {{#each links }}
+              {{#if active}}
+              <li class="active"><a href= {{ link }}>{{ linkTitle }}<span class="sr-only">(current)</span></a></li>
+              {{else}}
+              <li><a href= {{ link }}>{{ linkTitle }}</a></li>
+              {{/if}}
+            {{/each }}
           </ul>
         </div>
       </div>
@@ -40,7 +45,7 @@
       <div class="cloudFan-footer row">
         <div class="col-xs-8 col-xs-offset-2">
           <div class="col-xs-12 col-sm-2">
-            <img src="public/images/global/global-cloudfan-logo-emblem.png"/>
+            <img src="/images/global/global-cloudfan-logo-emblem.png"/>
           </div>
           <div class="col-xs-12 col-sm-5">
             <span>&copy {{ copyright }}</span>
@@ -54,6 +59,10 @@
       </div>
     </footer>
   </body>
-  <script type="text/javascript" src="/public/libs/jquery/jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" src="/public/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/libs/jquery/jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/libs/angular/angular.min.js"></script>
+  <script type="text/javascript" src="/libs/angular/angular-route.min.js"></script>
+  <script type="text/javascript" src="/appConfig_client.js"></script>
+  <script type="text/javascript" src="/controllers/index_client.controller.js"></script>
 </html>

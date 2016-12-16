@@ -41,6 +41,23 @@ var renderIndexpage = function (req, res, responseBody) {
   }
   res.render('index', {
     title: title_res,
+    links: [
+      {
+        linkTitle: 'About',
+        link: 'about',
+        active: false
+      },
+      {
+        linkTitle: 'Contact',
+        link: 'contact',
+        active: false
+      },
+      {
+        linkTitle: 'Dashbord',
+        link: '/dashbord/',
+        active: false
+      }
+    ],
     copyright: 'CloudFan',
     developer: 'pinebrook',
     contact: 'kaizhang.udel@gmail.com',
@@ -48,7 +65,7 @@ var renderIndexpage = function (req, res, responseBody) {
   });
 };
 
-module.exports.indexController_server = function(req, res){
+module.exports.indexController = function(req, res){
   var requestOptions, path;
   path = '/api/';
   requestOptions = {

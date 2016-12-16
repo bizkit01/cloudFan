@@ -1,0 +1,124 @@
+@import "public/libs/bootstrap/less/variables.less";
+
+.index-banner {
+  margin-top: 50px;
+  margin-left: 0px;
+  margin-right: 0px;
+  padding: 0px 0px;
+  box-shadow: 0px 3px 3px @gray-dark;
+}
+
+.slider-image {
+  width: 100%;
+  max-height: 600px;
+}
+
+.index-services {
+  margin: 50px 0px;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.index-services {
+  text-align: center;
+
+  .index-service {
+    margin-bottom: 30px;
+    img {
+      display: block;
+      width: 50%;
+      margin: 30px auto;
+    }
+  }
+
+  div a {
+    button {
+      background-color: white;
+      border-color: #3498db;
+      color: #3498db;
+      font-size: 20px;
+
+      &:hover, &:focus, &:active {
+        background-color: #3498db;
+        color: white;
+      }
+    }
+  }
+}
+
+.index-multiDevices {
+  max-height: 360px;
+  margin: 0px 0px;
+  padding: 30px 0px;
+  background: -webkit-linear-gradient(top, white , @gray-lighter);
+  background: -o-linear-gradient(bottom, white, @gray-lighter);
+  background: -moz-linear-gradient(bottom, white, @gray-lighter);
+  background: linear-gradient(to bottom, white , @gray-lighter);
+
+  b {
+    display: block;
+    color: @gray-light;
+    font-size: 200%;
+  }
+
+  div {
+    img {
+      width: 100%;
+      margin: 0px auto;
+    }
+  }
+}
+
+.index-email {
+  height: 450px;
+  margin: 0px 0px;
+  padding: 150px 0px;
+  background-image: url("/images/index/index-email.jpg");
+  background-size: cover;
+
+
+  &:hover .index-email-tip {
+    visibility: visible;
+    animation: indexEmailTipLift 0.5s 1;
+  }
+
+  @keyframes indexEmailTipLift {
+    from {bottom: -30px;}
+    to {bottom: 0px;}
+  }
+
+  div .index-email-tip {
+    background-color: #3498db;
+    padding: 10px 10px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 3px @gray-dark;
+    position: relative;
+    visibility: hidden;
+
+    b {
+      font-size: 20px;
+      color: white;
+    }
+
+    &:after {
+      position: absolute;
+      top: 100%;
+      left: 20px;
+      content:'';
+      width: 0px;
+      height: 0px;
+      margin: 0 auto;
+      border-top: solid 10px #3498db;
+      border-left: solid 10px transparent;
+      border-right: solid 10px transparent;
+    }
+  }
+
+  div input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+}

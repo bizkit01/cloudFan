@@ -1,0 +1,10 @@
+<!-- define an angular application in the server side template, this template is a part of layout and a sibling of index page, about page and contact page etc.,
+and the views of this angular application will be sent to browser when laoded and ran in clien side,rather than running in server, because
+all the views of this angular application are located in the app_client folder, and the contents of this folder were defined as static contents
+in the app.js-->
+<!-- angular application-->
+<!-- a interface of server side-client side -->
+<div ng-app='cloudfanApp'>
+  <!-- angular application views -->
+  <div ng-view></div>
+</div>
