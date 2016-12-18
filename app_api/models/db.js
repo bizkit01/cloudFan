@@ -4,8 +4,8 @@ var gracefulShutdown;
 var dbURI = 'mongodb://localhost/cloudfan';
 
 if (process.env.NODE_ENV === 'production') {
-  dbURI = process.env.MONGOLAB_URI;
-  // dbURI = 'mongodb://heroku_ll06nff8:55ahvscsb9699ugq06jrjket9q@ds133368.mlab.com:33368/heroku_ll06nff8';
+  // dbURI = process.env.MONGOLAB_URI;
+  dbURI = 'mongodb://heroku_ll06nff8:55ahvscsb9699ugq06jrjket9q@ds133368.mlab.com:33368/heroku_ll06nff8';
 }
 
 mongoose.connect(dbURI);
