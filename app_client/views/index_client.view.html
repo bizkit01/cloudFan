@@ -1,69 +1,127 @@
-<div class="dashbord-services row">
-  <div class="col-xs-12 col-md-10 col-md-offset-1">
-    <div class="dashbord-service col-xs-6 col-sm-2">
-      <div class="col-xs-6">
-        <a>
-          <img src="/images/index/service-menu.png"/>
-          <b>Menu & Order</b>
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <p>Manage your menu and let customer order by it.</p>
-      </div>
-    </div>
-    <div class="dashbord-service col-xs-6 col-sm-2">
-      <div class="col-xs-6">
-        <a>
-          <img src="/images/index/service-cashier.png"/>
-          <b>Cashier</b>
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <p>Record every single revenues, manage them at anytime.</p>
-      </div>
-    </div>
-    <div class="dashbord-service col-xs-6 col-sm-2">
-      <div class="col-xs-6">
-        <a>
-          <img src="/images/index/service-inventory.png"/>
-          <b>Inventory</b>
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <p>Note the record of every inventory in or out.</p>
-      </div>
-    </div>
-    <div class="dashbord-service col-xs-6 col-sm-2">
-      <div class="col-xs-6">
-        <a>
-          <img src="/images/index/service-employee.png"/>
-          <b>Employees</b>
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <p>Manage your employees, control their time cards and salaries.</p>
-      </div>
-    </div>
-    <div class="dashbord-service col-xs-6 col-sm-2">
-      <div class="col-xs-6">
-        <a>
-          <img src="/images/index/service-account-us.png"/>
-          <b>Account</b>
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <p>Check your cash and account every day.</p>
+<div class="dashbord-index-view row" ng-controller="indexController">
+  <div class="dashbord-index-content">
+    <div class="dashbord-index-id col-xs-12 col-sm-8 col-sm-offset-2">
+      <!-- sign in/sign up  nav tabs -->
+      <ul id="dashbordIndexID" class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#signin" role="tab" data-toggle="tab">Sign In</a></li>
+        <li role="presentation"><a href="#signup" role="tab" data-toggle="tab">Sign Up</a></li>
+      </ul>
+      <!-- sign in/sign upnav tab panes -->
+      <div class="tab-content col-xs-12 col-md-8 col-md-offset-2">
+        <!-- sign in form tab-->
+        <div role="tabpanel" class="tab-pane fade in active" id="signin">
+          <h1>Sign In</h1>
+          <form class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="dashbord-index-id-opt">
+              <button type="submit" class="btn btn-primary">Sign In</button>
+              <a>Forgot Password?</a>
+            </div>
+          </form>
+        </div>
+        <!-- sign up form tab-->
+        <div role="tabpanel" class="tab-pane fade" id="signup">
+          <h1>Sign Up</h1>
+          <form class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+            <div class="form-group">
+              <label>Email address</label>
+              <input type="email" class="form-control" placeholder="Email">
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label>Confirm password</label>
+              <input type="password" class="form-control" placeholder="Input password again">
+            </div>
+            <div class="dashbord-index-id-opt">
+              <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-    <div class="dashbord-service col-xs-6 col-sm-2">
-      <div class="col-xs-6">
-        <a>
-          <img src="/images/index/service-chart.png"/>
-          <b>Statistical Charts</b>
-        </a>
-      </div>
-      <div class="col-xs-6">
-        <p>Control your bussiness by statistical data, we show it visually.</p>
+    <div class="dashbord-index-services col-xs-12">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+        <div class="dashbord-index-service col-xs-12 col-sm-6 col-md-4">
+          <div class="dashbord-index-service-head1">
+            <h3>Menu & Ordering</h3>
+          </div>
+          <div class="dashbord-index-service-content">
+            <p>
+              Customize your online menu, and your waiter/waitress would order meal for customer by it,
+              the details about this order would send to cashier and kitchen automaticly, reduce the procedures.
+            </p>
+            <a><button class="btn btn-default">Enter</button></a>
+          </div>
+        </div>
+        <div class="dashbord-index-service col-xs-12 col-sm-6 col-md-4">
+          <div class="dashbord-index-service-head2">
+            <h3>Cashier</h3>
+          </div>
+          <div class="dashbord-index-service-content">
+          <p>
+            Once waiter/waitress finished a order, cashier receives the order detail, at the time customer
+            check, cashier would be able to terminate this order and save the details.
+          </p>
+            <a><button class="btn btn-default">Enter</button></a>
+          </div>
+        </div>
+        <div class="dashbord-index-service col-xs-12 col-sm-6 col-md-4">
+          <div class="dashbord-index-service-head1">
+            <h3>Manage inventory</h3>
+          </div>
+          <div class="dashbord-index-service-content">
+            <p>
+              Record all of the details of every single time stuffs in and out, include their name, catagory, time,
+              bought price, selling price, destination, source and person who handled it.
+            </p>
+            <a><button class="btn btn-default">Enter</button></a>
+          </div>
+        </div>
+        <div class="dashbord-index-service col-xs-12 col-sm-6 col-md-4">
+          <div class="dashbord-index-service-head2">
+            <h3>Manage employees</h3>
+          </div>
+          <div class="dashbord-index-service-content">
+            <p>
+              Manage your employees, it would record their working time and salaries.
+            </p>
+            <a><button class="btn btn-default">Enter</button></a>
+          </div>
+        </div>
+        <div class="dashbord-index-service col-xs-12 col-sm-6 col-md-4">
+          <div class="dashbord-index-service-head1">
+            <h3>Journal account</h3>
+          </div>
+          <div class="dashbord-index-service-content">
+            <p>
+              All of your revnue from cashier and expense from inventory would be saved into the journal account sort by time,
+              and you can also create several accounts to manage your money flexible.
+            </p>
+            <a><button class="btn btn-default">Enter</button></a>
+          </div>
+        </div>
+        <div class="dashbord-index-service col-xs-12 col-sm-6 col-md-4">
+          <div class="dashbord-index-service-head2">
+            <h3>Statistical charts</h3>
+          </div>
+          <div class="dashbord-index-service-content">
+            <p>
+              We provide several different sort of statistical charts to show how is your bussiness going in different respects, help you controll
+              your bussiness directly.
+            </p>
+            <a><button class="btn btn-default">Enter</button></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

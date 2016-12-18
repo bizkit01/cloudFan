@@ -25,6 +25,9 @@
   width: 50%;
   margin: 30px auto;
 }
+.index-services .index-service label {
+  color: #777777;
+}
 .index-services div a button {
   background-color: white;
   border-color: #3498db;
