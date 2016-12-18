@@ -76,11 +76,7 @@ module.exports.indexController = function(req, res){
   };
 
   request(requestOptions, function (err, response, body) {
-    if (response.statusCode === 200) {
       renderIndexpage(req, res, body);
-    } else {
-      _showError(req, res, response.statusCode);
-    }
   });
 
 };
