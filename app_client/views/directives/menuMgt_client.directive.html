@@ -1,0 +1,67 @@
+<div class="dashbord-menuorder-menu-mgt">
+  <div class="dashbord-menuord-menu-mgt-category-row col-xs-12" ng-repeat="category in menuDataCtrl.categories" ng-click="initAllCollapses()">
+    <!-- category remove icon -->
+    <a tabindex="0" class="fa fa-trash dashbord-menuord-menu-mgt-category-row-remove" role="button"
+      data-toggle="popover" data-trigger="focus" data-content="Cannot remove the last category."
+      ng-mouseover="activePopover(category.categoryId)" ng-click="removeCategory(category.categoryId)">
+    </a>
+    <!-- menu create form -->
+    <form class="form-inline">
+      <!-- category name input -->
+      <div class="form-group">
+        <label>New Category:</label>
+        <input type="text" class="form-control" placeholder="Category name" ng-model="category.categoryName"
+        ng-change='categoryNameValidation(category.categoryName, category.categoryId)'>
+        <!-- category name validation error tip -->
+        <span class="label label-danger" ng-show="category.categoryErrorDis">Please input category name</span>
+      </div>
+      <!-- meals in a category -->
+      <div class="dashbord-menuorder-menu-mgt-meal-row row">
+        <!-- meals list -->
+        <div class="dashbord-menuorder-menu-mgt-meal-cell col-xs-12 col-sm-4 col-md-2" ng-repeat="meal in category.meals">
+          <div class="dashbord-menuorder-menu-mgt-meal-content">
+            <div class="dashbord-menuorder-menu-mgt-meal-opt">
+              <a class="fa fa-pencil" ng-click="editMeal(meal.categoryId, meal)"></a>
+              <a class="fa fa-trash" ng-click="removeMeal(meal.categoryId, meal.mealId)"></a>
+            </div>
+            <p class="dashbord-menuorder-menu-mgt-meal-name">{{meal.mealName}}</p>
+            <p class="dashbord-menuorder-menu-mgt-meal-price">{{meal.mealPrice}}</p>
+          </div>
+        </div>
+        <!-- add meal button -->
+        <div class="dashbord-menuorder-menu-mgt-meal-cell col-xs-12 col-sm-4 col-md-2">
+          <div class="dashbord-menuorder-menu-mgt-meal-plus" ng-click="addMeal(category.categoryId)">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <!-- meal info input valiation error tip -->
+      <span class="label label-danger" ng-show="category.mealErrorDis">Please input meal name and price</span>
+      <!-- meal info input collapse, the ng-click is for stop the propagation of the hide and clear collapse event, so when click
+            in the collapse, the init and clear event would be stopped-->
+      <div class="collapse" id="mealCreate_{{category.categoryId}}" ng-click="$event.stopPropagation()">
+        <div class="well">
+          <form class="form-inline">
+            <div class="form-group">
+              <label>New meal</label>
+              <input type="text" class="form-control" placeholder="Meal name" ng-model="menuDataTemp.mealName" ng-disabled="category.categoryErrorDis">
+            </div>
+            <div class="form-group">
+              <label>Price</label>
+              <input type="text" class="form-control" placeholder="Meal Price" ng-model="menuDataTemp.mealPrice" ng-disabled="category.categoryErrorDis">
+            </div>
+            <!-- create a new meal -->
+            <button type="submit" class="btn btn-primary" ng-click="menuDataTemp.mealEidtStatus ? updateMeal(category.categoryId) : createMeal(category.categoryId)">Enter</button>
+          </form>
+        </div>
+      </div>
+      <!-- create a new category -->
+      <a ng-click="addCategory(category.categoryId)"><i class="fa fa-plus"></i>&nbsp&nbspAdd category here</a>
+    </form>
+  </div>
+  <div class="dashbord-menuorder-menu-mgt-opt col-xs-12">
+    <button type="submit" class="btn btn-primary" ng-click="submitMenu()">Submit</button>
+    <div class="alert alert-success" role="alert" ng-show="menuStatus.succeed.status">{{menuStatus.succeed.message}}</div>
+    <div class="alert alert-danger" role="alert" ng-show="menuStatus.failed.status">{{menuStatus.failed.message}}</div>
+  </div>
+</div>

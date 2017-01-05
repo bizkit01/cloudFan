@@ -1,0 +1,56 @@
+@import "public/libs/bootstrap/less/variables.less";
+
+.dashbord-menuorder-view {
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+
+
+  .dashbord-menuorder-content {
+    margin-top: 100px;
+
+    .dashbord-index-menuorder {
+      padding: 0px 0px;
+
+      #dashbordMenuOrder {
+        width: 100%;
+        margin-left: 0px;
+      }
+
+      .dashbord-menuorder-title-area {
+        margin: 10px 0px;
+
+        @media(max-width: 500px) {
+          text-align: center;
+        }
+        .dashbord-menuorder-title {
+          text-align: left;
+          margin: 10px 0px;
+          h1 {
+            color: @gray-light;
+          }
+        }
+
+        .dashbord-menuorder-new {
+          text-align: right;
+          margin: 10px 0px;
+
+          @media(max-width: 500px) {
+            text-align: center;
+          }
+          button {
+            font-size: 18px;
+          }
+        }
+      }
+
+      label {
+        font-size: 18px;
+        color: @gray-light;
+      }
+
+    }
+
+  }
+}

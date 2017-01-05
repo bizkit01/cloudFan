@@ -60,3 +60,4 @@ if (process.platform === 'wind32') {
 }
 
 require('./index_api.model');
+require('./menu_api.model');

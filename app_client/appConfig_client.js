@@ -8,6 +8,11 @@
       controller: 'indexController',
       controllerAs: 'vm'
     })
+    .when ('/menuorder', {
+      templateUrl: '/views/menuorder_client.view.html',
+      controller: 'menuorderController',
+      controllerAs: 'vm'
+    })
     .otherwise({redirectTo: '/'});
   }
 
